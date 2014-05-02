@@ -1,0 +1,236 @@
+Gophercon system tooling review
+a thinly veiled devops pitch
+2 May 2014
+Tags: gophercon, devops
+
+Dan Buch
+"Engineeering", ModCloth
+d.buch@modcloth.com
+http://github.com/meatballhat/gophercon-devops-roundup-talk
+@meatballhat
+
+* CoreOS
+.link https://github.com/coreos
+.image coreos.png
+
+Commercial Linux distro made of open source stuff, much of it in Go
+
+* CoreOS
+
+*etcd*
+
+A highly-available key value store for shared configuration and service discovery
+
+Consensus!
+
+Clusters!
+
+* CoreOS
+
+*fleet*
+
+A distributed init system
+
+Containers!
+
+Machine management!
+
+  $ fleetctl list-machines
+  MACHINE                                 IP          METADATA
+  148a18ff-6e95-4cd8-92da-c9de9bb90d5a    19.4.0.112  region=us-west
+  491586a6-508f-4583-a71d-bfc4d146e996    19.4.0.113  region=us-east
+
+* CoreOS
+
+*go-semver*
+
+A semantic versioning library for Go which lets you parse and compare two semantic version strings.
+
+Only 0.005% as popular as *etcd*, but I still love it.
+
+  a, err := semver.NewVersion("1.2.3")
+  b, err := semver.NewVersion("3.2.1")
+
+  fmt.Printf("%s < %s == %t\n", a, b, a.LessThan(*b))
+
+
+* Greater CoreOS ecosystem
+
+*confd*
+
+.link https://github.com/kelseyhightower/confd
+
+What's a 12factor?
+
+Use etcd today for the applications of yesterday!
+
+Kelsey is a singularly amazing human.  The end.
+
+
+* HashiCorp
+
+.link http://www.hashicorp.com
+.image hashicorp.png
+
+AMAZE
+
+(They make Vagrant)
+
+
+* HashiCorp
+
+*consul*
+
+.link http://www.consul.io
+
+A tool for service discovery, monitoring and configuration.
+
+It's crazy:
+
+- Service Discovery
+- Health Checking
+- Key/Value Storage
+- Multi-Datacenter
+
+
+* HashiCorp
+
+*serf*
+
+.link https://github.com/hashicorp/serf
+
+Service orchestration and management
+
+(It's kinda inside *consul*)
+
+
+* HashiCorp
+
+*packer*
+
+.link https://github.com/mitchellh/packer
+
+A tool for creating identical machine images for multiple platforms from a
+single source configuration.
+
+Builders include:
+- Amazon
+- Digital Ocean
+- Docker
+- VirtualBox
+- VMWare
+- Joyent (JUST KIDDING!)
+
+* HashiCorp
+
+*gox*
+
+.link https://github.com/mitchellh/gox
+
+A dead simple, no frills Go cross compile tool
+
+Build all the binaries
+
+
+* Flynn
+
+.link https://flynn.io
+
+.image flynn.png
+
+It's like Heroku, but not Heroku.
+
+
+* Flynn
+
+Where to start?
+
+*flynn-host*
+
+.link https://github.com/flynn/flynn-host
+
+*discoverd*
+
+.link https://github.com/flynn/discoverd
+
+
+* Flynn
+
+no more links now ...
+
+- *flynn-controller*
+- *flynn-bootstrap*
+- *gitreceived*
+- *flynn-cli*
+- *flynn-receive*
+- I'm tired of this ...
+
+
+Read this now:
+
+.link https://github.com/flynn/flynn
+
+
+* Flynn
+
+No really, it's amazing stuff.
+
+You can have Heroku on your own servers.
+
+Done.
+
+Wait, why don't we have this???
+
+
+* Non sequitur time!
+
+* DevOps
+
+* DevOps
+
+What is devops?
+
+"It's those tools that one team wrote for deploying something, right?"
+
+"Oh, you mean the DevOps Team?"
+
+"That's what Chef does."
+
+
+* DevOps
+
+Wrong.
+
+Wrong.
+
+Dead wrong.
+
+
+* DevOps
+
+(My personal definition)
+
+Holistic understanding of the product you're delivering and why your customer
+wants it.
+
+Responding to change not just in development, but in delivery.
+
+Tight feedback.
+
+No silos allowed.
+
+* DevOps
+
+ModCloth is committed to this.  With money.
+
+.link http://devopsdays.org/events/2014-pittsburgh
+
+.image devops-brain.png
+
+* DevOps
+
+Convince me this doesn't apply to you.
+
+.image trollface.png
+
+Come at me, ModCloth Engineering.

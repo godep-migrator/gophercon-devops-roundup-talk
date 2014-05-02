@@ -1,0 +1,31 @@
+{
+	"ImportPath": "github.com/meatballhat/gophercon-devops-roundup-talk",
+	"GoVersion": "go1.2",
+	"Deps": [
+		{
+			"ImportPath": "code.google.com/p/go.net/websocket",
+			"Comment": "null-99",
+			"Rev": "65926d3a7d01d26b31f8e70a799044bcecb48775"
+		},
+		{
+			"ImportPath": "code.google.com/p/go.talks/present",
+			"Comment": "null-172",
+			"Rev": "1205b8295b19d61e5efeb2dc902706d192652d2a"
+		},
+		{
+			"ImportPath": "code.google.com/p/go.tools/godoc/static",
+			"Comment": "null-814",
+			"Rev": "0876d1c063a902ce27b1ada7e5eb851585151aa9"
+		},
+		{
+			"ImportPath": "code.google.com/p/go.tools/playground/socket",
+			"Comment": "null-814",
+			"Rev": "0876d1c063a902ce27b1ada7e5eb851585151aa9"
+		},
+		{
+			"ImportPath": "code.google.com/p/go.tools/present",
+			"Comment": "null-814",
+			"Rev": "0876d1c063a902ce27b1ada7e5eb851585151aa9"
+		}
+	]
+}
